@@ -10,33 +10,180 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CalendarioRouteImport } from './routes/calendario'
+import { Route as ClientesRouteImport } from './routes/clientes'
+import { Route as ConfiguracoesRouteImport } from './routes/configuracoes'
+import { Route as EntregasRouteImport } from './routes/entregas'
+import { Route as FinanceiroRouteImport } from './routes/financeiro'
+import { Route as PedidosRouteImport } from './routes/pedidos'
+import { Route as ProdutosRouteImport } from './routes/produtos'
+import { Route as RelatoriosRouteImport } from './routes/relatorios'
+import { Route as SeparacaoRouteImport } from './routes/separacao'
+import { Route as UsuariosRouteImport } from './routes/usuarios'
+import { Route as WhatsappRouteImport } from './routes/whatsapp'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CalendarioRoute = CalendarioRouteImport.update({
+  id: '/calendario',
+  path: '/calendario',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClientesRoute = ClientesRouteImport.update({
+  id: '/clientes',
+  path: '/clientes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfiguracoesRoute = ConfiguracoesRouteImport.update({
+  id: '/configuracoes',
+  path: '/configuracoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EntregasRoute = EntregasRouteImport.update({
+  id: '/entregas',
+  path: '/entregas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinanceiroRoute = FinanceiroRouteImport.update({
+  id: '/financeiro',
+  path: '/financeiro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PedidosRoute = PedidosRouteImport.update({
+  id: '/pedidos',
+  path: '/pedidos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProdutosRoute = ProdutosRouteImport.update({
+  id: '/produtos',
+  path: '/produtos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RelatoriosRoute = RelatoriosRouteImport.update({
+  id: '/relatorios',
+  path: '/relatorios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeparacaoRoute = SeparacaoRouteImport.update({
+  id: '/separacao',
+  path: '/separacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UsuariosRoute = UsuariosRouteImport.update({
+  id: '/usuarios',
+  path: '/usuarios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhatsappRoute = WhatsappRouteImport.update({
+  id: '/whatsapp',
+  path: '/whatsapp',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/calendario': typeof CalendarioRoute
+  '/clientes': typeof ClientesRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/entregas': typeof EntregasRoute
+  '/financeiro': typeof FinanceiroRoute
+  '/pedidos': typeof PedidosRoute
+  '/produtos': typeof ProdutosRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/separacao': typeof SeparacaoRoute
+  '/usuarios': typeof UsuariosRoute
+  '/whatsapp': typeof WhatsappRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/calendario': typeof CalendarioRoute
+  '/clientes': typeof ClientesRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/entregas': typeof EntregasRoute
+  '/financeiro': typeof FinanceiroRoute
+  '/pedidos': typeof PedidosRoute
+  '/produtos': typeof ProdutosRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/separacao': typeof SeparacaoRoute
+  '/usuarios': typeof UsuariosRoute
+  '/whatsapp': typeof WhatsappRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/calendario': typeof CalendarioRoute
+  '/clientes': typeof ClientesRoute
+  '/configuracoes': typeof ConfiguracoesRoute
+  '/entregas': typeof EntregasRoute
+  '/financeiro': typeof FinanceiroRoute
+  '/pedidos': typeof PedidosRoute
+  '/produtos': typeof ProdutosRoute
+  '/relatorios': typeof RelatoriosRoute
+  '/separacao': typeof SeparacaoRoute
+  '/usuarios': typeof UsuariosRoute
+  '/whatsapp': typeof WhatsappRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/calendario'
+    | '/clientes'
+    | '/configuracoes'
+    | '/entregas'
+    | '/financeiro'
+    | '/pedidos'
+    | '/produtos'
+    | '/relatorios'
+    | '/separacao'
+    | '/usuarios'
+    | '/whatsapp'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/calendario'
+    | '/clientes'
+    | '/configuracoes'
+    | '/entregas'
+    | '/financeiro'
+    | '/pedidos'
+    | '/produtos'
+    | '/relatorios'
+    | '/separacao'
+    | '/usuarios'
+    | '/whatsapp'
+  id:
+    | '__root__'
+    | '/'
+    | '/calendario'
+    | '/clientes'
+    | '/configuracoes'
+    | '/entregas'
+    | '/financeiro'
+    | '/pedidos'
+    | '/produtos'
+    | '/relatorios'
+    | '/separacao'
+    | '/usuarios'
+    | '/whatsapp'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CalendarioRoute: typeof CalendarioRoute
+  ClientesRoute: typeof ClientesRoute
+  ConfiguracoesRoute: typeof ConfiguracoesRoute
+  EntregasRoute: typeof EntregasRoute
+  FinanceiroRoute: typeof FinanceiroRoute
+  PedidosRoute: typeof PedidosRoute
+  ProdutosRoute: typeof ProdutosRoute
+  RelatoriosRoute: typeof RelatoriosRoute
+  SeparacaoRoute: typeof SeparacaoRoute
+  UsuariosRoute: typeof UsuariosRoute
+  WhatsappRoute: typeof WhatsappRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +195,99 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/calendario': {
+      id: '/calendario'
+      path: '/calendario'
+      fullPath: '/calendario'
+      preLoaderRoute: typeof CalendarioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clientes': {
+      id: '/clientes'
+      path: '/clientes'
+      fullPath: '/clientes'
+      preLoaderRoute: typeof ClientesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/configuracoes': {
+      id: '/configuracoes'
+      path: '/configuracoes'
+      fullPath: '/configuracoes'
+      preLoaderRoute: typeof ConfiguracoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/entregas': {
+      id: '/entregas'
+      path: '/entregas'
+      fullPath: '/entregas'
+      preLoaderRoute: typeof EntregasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/financeiro': {
+      id: '/financeiro'
+      path: '/financeiro'
+      fullPath: '/financeiro'
+      preLoaderRoute: typeof FinanceiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pedidos': {
+      id: '/pedidos'
+      path: '/pedidos'
+      fullPath: '/pedidos'
+      preLoaderRoute: typeof PedidosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/produtos': {
+      id: '/produtos'
+      path: '/produtos'
+      fullPath: '/produtos'
+      preLoaderRoute: typeof ProdutosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/relatorios': {
+      id: '/relatorios'
+      path: '/relatorios'
+      fullPath: '/relatorios'
+      preLoaderRoute: typeof RelatoriosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/separacao': {
+      id: '/separacao'
+      path: '/separacao'
+      fullPath: '/separacao'
+      preLoaderRoute: typeof SeparacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/usuarios': {
+      id: '/usuarios'
+      path: '/usuarios'
+      fullPath: '/usuarios'
+      preLoaderRoute: typeof UsuariosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/whatsapp': {
+      id: '/whatsapp'
+      path: '/whatsapp'
+      fullPath: '/whatsapp'
+      preLoaderRoute: typeof WhatsappRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CalendarioRoute: CalendarioRoute,
+  ClientesRoute: ClientesRoute,
+  ConfiguracoesRoute: ConfiguracoesRoute,
+  EntregasRoute: EntregasRoute,
+  FinanceiroRoute: FinanceiroRoute,
+  PedidosRoute: PedidosRoute,
+  ProdutosRoute: ProdutosRoute,
+  RelatoriosRoute: RelatoriosRoute,
+  SeparacaoRoute: SeparacaoRoute,
+  UsuariosRoute: UsuariosRoute,
+  WhatsappRoute: WhatsappRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

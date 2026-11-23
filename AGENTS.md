@@ -28,3 +28,12 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- Admin modules are defined once in `src/lib/modules.ts`; sidebar, header, mobile nav, page heads and routing tests read from it — add a module there and its route file together so navigation and routes never drift.
+- Domain status/payment/category vocabularies live in `src/lib/domain/status.ts` and drive `StatusBadge`; database enums should mirror them so UI labels stay consistent.
+- Locale, currency and timezone formatting go through `src/lib/format.ts` only, so every date and price shares the same regional rules.
+- Unimplemented actions use `PendingButton`/`DevBadge` and forms use `PreviewFormDialog` until persistence exists, so no control appears to work without doing anything.
+- Lists use the shared `DataTable` (table on desktop, cards on mobile) instead of page-specific tables, to keep the mobile experience consistent.
+- Every change follows `docs/VERSIONING.md`: log it under `[Não lançado]` in `docs/CHANGELOG.md` before implementing, then add a new `docs/versions/vX.Y.Z.md` and bump `package.json` and `src/lib/app-info.ts`; never edit past version files.
