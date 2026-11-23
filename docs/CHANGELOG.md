@@ -6,7 +6,12 @@ Detalhes de cada versão ficam em `docs/versions/`.
 
 ## [Não lançado]
 
-_Nenhuma mudança planejada registrada._
+### Planejado — v1.1.0
+- Login administrativo real por e-mail e senha, sessão persistente, proteção das páginas administrativas, saída e recuperação de senha, sem cadastro público nem credenciais fixas.
+- Provisionamento seguro e documentado do primeiro administrador, com permissões separadas dos dados de perfil.
+- Clientes persistentes: criar, listar, buscar, editar e desativar, com os campos atuais, telefone único e políticas RLS.
+- Ativação do Lovable Cloud e alterações de schema pelo Lovable, condicionadas às aprovações necessárias; preservar pt-BR, visual atual e futuro acesso de clientes por telefone e código.
+- Verificar testes, compilação e comportamento essencial; registrar a versão compatível sem alterar v1.0.0 e sem publicar o aplicativo.
 
 ## [1.0.0] — 2026-11-23
 
